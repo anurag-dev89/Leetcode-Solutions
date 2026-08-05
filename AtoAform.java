@@ -14,7 +14,6 @@ public class AtoAform {
             ans.addFirst(k % 10);
             k /= 10;
         }
-
         return ans;
     }
     public static void main(String[] args) {
