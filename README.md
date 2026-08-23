@@ -4,10 +4,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0084-largest-rectangle-in-histogram) |
 | [0853-car-fleet](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0853-car-fleet) |
 ## Stack
 |  |
 | ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0084-largest-rectangle-in-histogram) |
 | [0853-car-fleet](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0853-car-fleet) |
 ## Sorting
 |  |
@@ -16,5 +18,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Monotonic Stack
 |  |
 | ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0084-largest-rectangle-in-histogram) |
 | [0853-car-fleet](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0853-car-fleet) |
+## Range Minimum/Maximum Query
+|  |
+| ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0084-largest-rectangle-in-histogram) |
 <!---LeetCode Topics End-->
