@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0084-largest-rectangle-in-histogram) |
+| [0704-binary-search](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0704-binary-search) |
 | [0853-car-fleet](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0853-car-fleet) |
 ## Stack
 |  |
@@ -24,4 +25,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0084-largest-rectangle-in-histogram) |
+## Binary Search
+|  |
+| ------- |
+| [0704-binary-search](https://github.com/anurag-dev89/Leetcode-Solutions/tree/master/0704-binary-search) |
 <!---LeetCode Topics End-->
