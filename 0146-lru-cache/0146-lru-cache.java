@@ -1,86 +1,101 @@
 class LRUCache {
 
+    // Each node stores one key-value pair
     class Node {
-        int key, value;
+        int key;
+        int value;
+
         Node prev, next;
 
-        Node(int key, int value){
+        Node(int key, int value) {
             this.key = key;
             this.value = value;
         }
     }
 
-    HashMap<Integer, Node> map;
-    Node head, tail;
     int capacity;
+
+    // HashMap helps us find any node in O(1)
+    HashMap<Integer, Node> map = new HashMap<>();
+
+    // Dummy nodes (they never store real data)
+    Node head = new Node(0, 0);   // Most recent side
+    Node tail = new Node(0, 0);   // Least recent side
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
-        map = new HashMap<>();
 
-        head = new Node(0,0);
-        tail = new Node(0,0);
-
+        // Empty list : HEAD <-> TAIL
         head.next = tail;
         tail.prev = head;
     }
 
-    private void insert(Node node){
-        Node next = head.next;
+    // Put a node right after HEAD
+    // This makes it the most recently used node
+    private void add(Node node) {
 
-        head.next = node;
+        node.next = head.next;
         node.prev = head;
 
-        node.next = next;
-        next.prev = node;
+        head.next.prev = node;
+        head.next = node;
     }
 
-    private void remove(Node node){
-        Node prev = node.prev;
-        Node next = node.next;
+    // Remove a node from the linked list
+    private void remove(Node node) {
 
-        prev.next = next;
-        next.prev = prev;
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
     }
 
     public int get(int key) {
 
-        if(!map.containsKey(key))
+        // Key not found
+        if (!map.containsKey(key))
             return -1;
 
         Node node = map.get(key);
 
+        // Since we used it, move it to the front
         remove(node);
-        insert(node);
+        add(node);
 
         return node.value;
     }
 
     public void put(int key, int value) {
 
-        if(map.containsKey(key)){
+        // If key already exists
+        if (map.containsKey(key)) {
+
             Node node = map.get(key);
 
-            remove(node);
-
+            // Update value
             node.value = value;
 
-            insert(node);
+            // Move it to the front (recently used)
+            remove(node);
+            add(node);
 
             return;
         }
 
-        if(map.size() == capacity){
+        // Cache is full
+        if (map.size() == capacity) {
+
+            // Last real node = Least Recently Used
             Node lru = tail.prev;
 
             remove(lru);
             map.remove(lru.key);
         }
 
+        // Create new node
         Node newNode = new Node(key, value);
 
+        // Store in both HashMap and Linked List
         map.put(key, newNode);
-        insert(newNode);
+        add(newNode);
     }
 }
 
